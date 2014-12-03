@@ -1,6 +1,6 @@
 " On OSX
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
-nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+"nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
 " Use F3 to open NERDTree (adds a space so that we can just start typing a
 " path if needed).
