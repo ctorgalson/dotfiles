@@ -2,28 +2,22 @@
 vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
 "nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
 
-" Use F3 to open NERDTree (adds a space so that we can just start typing a
-" path if needed).
-"
-" This should not be necessary with Janus (should be <Leader>n), but it doesn't
-" seem to work in mvim at least...
-"map <F3> :NERDTree 
-" Use F4 to toggle NERDTree (opens/closes with most recent directory):
-map <F4> :NERDTreeToggle<CR>
 map <C-Space> :za<CR>
 
 " Make sure terminal is set to use 256 colours where possible:
 set t_Co=256
 " Set color scheme:
-set background=dark 
-colorscheme solarized 
+set background=dark
+colorscheme solarized
 syntax on
 " Display location of 80th column:
 if exists("&colorcolumn")
   set colorcolumn=80
 endif
+
 " Enable mouse positioning of cursor (even in terminal):
 set mouse=a
+
 " Toggle paste with F2 (prevents disastrous auto-indenting when pasting
 " already indented code):
 set pastetoggle=<F2>
@@ -51,7 +45,7 @@ endif
 syntax on
 au FileType python set shiftwidth=2
 " If you like SQL syntax highlighting inside Strings:
-"let php_sql_query = 1
+let php_sql_query = 1
 " For highlighting the Baselib methods:
 "let php_baselib = 1
 " Enable HTML syntax highlighting inside strings:
@@ -76,22 +70,6 @@ let js_folding = 1
 " x > 0 to sync at least x lines backwards,
 " x = 0 to sync from start:
 "let php_sync_method = 0
-
-" Set a reasonable font size and family for gui versions--we set for Gnome,
-" Photon (what is Photon anyhow?) KDE, X11 and 'other'...
-if has("gui_running")
-  if has("gui_gtk2") " Gnome...
-    set guifont=Liberation\ Mono\ 13
-  elseif has("gui_photon")
-    set guifont=Courier\ New:s11
-  elseif has("gui_kde") " KDE...
-    set guifont=Liberation\ Mono/11/-1/5/50/0/0/0/1/0
-  elseif has("x11") " Generic X11...
-    set guifont=-*-courier-medium-r-normal-*-*-180-*-*-m-*-*
-  else
-    set guifont=Menlo:h14
-  endif
-endif
 
 " Soft-wrap text:
 set wrap
@@ -134,15 +112,6 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-
-" " old vim-powerline symbols
-" let g:airline_left_sep = '⮀'
-" let g:airline_left_alt_sep = '⮁'
-" let g:airline_right_sep = '⮂'
-" let g:airline_right_alt_sep = '⮃'
-" let g:airline_symbols.branch = '⭠'
-" let g:airline_symbols.readonly = '⭤'
-" let g:airline_symbols.linenr = '⭡'
 
 call pathogen#helptags()
 
