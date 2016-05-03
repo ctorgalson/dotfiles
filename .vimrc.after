@@ -1,34 +1,64 @@
-" On OSX
-vmap <C-c> y:call system("pbcopy", getreg("\""))<CR>
-"nmap <C-v> :call setreg("\"",system("pbpaste"))<CR>p
+" Vim appearance.
 
-map <C-Space> :za<CR>
-
-" Make sure terminal is set to use 256 colours where possible:
+" Make sure terminal is set to use 256 colours where possible.
 set t_Co=256
-" Set color scheme:
-set background=dark
+
+" Set color scheme.
 colorscheme solarized
-syntax on
-" Display location of 80th column:
+
+" Set background.
+set background=dark
+
+" Display location of 80th column.
 if exists("&colorcolumn")
-  set colorcolumn=80
+ set colorcolumn=80
 endif
 
-" Enable mouse positioning of cursor (even in terminal):
-set mouse=a
 
-" Toggle paste with F2 (prevents disastrous auto-indenting when pasting
-" already indented code):
-set pastetoggle=<F2>
+" Airline / Powerline stuff.
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 
-" Various config from d.o (http://drupal.org/node/29325):
+" Unicode symbols for Airline.
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" Powerline symbols for Airline.
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+
+" Indentation.
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set autoindent
 set smartindent
 
+" Python.
+au FileType python set shiftwidth=2
+
+
+" Syntax highlighting.
+syntax on
+
+" PHP highlighting.
 if has("autocmd")
   " Drupal *.module and *.install files.
   augroup module
@@ -39,37 +69,67 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.profile set filetype=php
     autocmd BufRead,BufNewFile *.view set filetype=php
   augroup END
-  autocmd FileType sass,scss,stylus syn cluster sassCssAttributes add=@cssColors
-  autocmd BufWritePre *.js :%s/\s\+$//e
 endif
-syntax on
-au FileType python set shiftwidth=2
+
 " If you like SQL syntax highlighting inside Strings:
 let php_sql_query = 1
+
 " For highlighting the Baselib methods:
 "let php_baselib = 1
+
 " Enable HTML syntax highlighting inside strings:
 let php_htmlInStrings = 1
+
 " Using the old colorstyle:
 "let php_oldStyle = 1
-" A
+
 " Enable highlighting ASP-style short tags:
 "let php_asp_tags = 1
+
 " Disable short tags:
 "let php_noShortTags = 1
+
 " For highlighting parent error ] or ):
 "let php_parent_error_close = 1
+
 " For skipping an php end tag, if there exists an open ( or [ without a closing
 " one:
 "let php_parent_error_open = 1
+
 "Enable folding for classes and functions:
 let php_folding = 1
 let js_folding = 1
+
 " Selecting syncing method:
 " x = -1 to sync by search (default),
 " x > 0 to sync at least x lines backwards,
 " x = 0 to sync from start:
 "let php_sync_method = 0
+
+" *.sass, *.scss highlighting.
+if has("autocmd")
+  autocmd FileType sass,scss,stylus syn cluster sassCssAttributes add=@cssColors
+endif
+
+" Remove trailing whitespace on save.
+if has("autocmd")
+  autocmd BufWritePre *.js :%s/\s\+$//e
+  autocmd BufWritePre *.html :%s/\s\+$//e
+  autocmd BufWritePre *.scss :%s/\s\+$//e
+  autocmd BufWritePre *.less :%s/\s\+$//e
+endif
+
+
+" Vim behaviour.
+
+map <C-Space> :za<CR>
+
+" Enable mouse positioning of cursor (even in terminal):
+set mouse=a
+
+" Toggle paste with F2 (prevents disastrous auto-indenting when pasting
+" already indented code):
+set pastetoggle=<F2>
 
 " Soft-wrap text:
 set wrap
@@ -84,34 +144,6 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
-
-" Airline / Powerline stuff
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
 
 call pathogen#helptags()
 
