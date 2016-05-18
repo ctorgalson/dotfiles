@@ -124,6 +124,9 @@ endif
 
 map <C-Space> :za<CR>
 
+" Use bash in Vim, not fish (or what-have-you):
+set shell=/bin/bash
+
 " Enable mouse positioning of cursor (even in terminal):
 set mouse=a
 
