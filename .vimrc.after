@@ -10,7 +10,7 @@ colorscheme solarized
 set background=dark
 
 " Display location of 80th column.
-if exists("&colorcolumn")
+if exists('&colorcolumn')
  set colorcolumn=80
 endif
 
@@ -107,12 +107,12 @@ let js_folding = 1
 "let php_sync_method = 0
 
 " *.sass, *.scss highlighting.
-if has("autocmd")
+if has('autocmd')
   autocmd FileType sass,scss,stylus syn cluster sassCssAttributes add=@cssColors
 endif
 
 " Remove trailing whitespace on save.
-if has("autocmd")
+if has('autocmd')
   autocmd BufWritePre *.js :%s/\s\+$//e
   autocmd BufWritePre *.html :%s/\s\+$//e
   autocmd BufWritePre *.scss :%s/\s\+$//e
