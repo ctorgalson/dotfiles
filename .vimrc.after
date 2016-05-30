@@ -124,6 +124,9 @@ endif
 
 map <C-Space> :za<CR>
 
+" Clipboard.
+set clipboard=unnamed
+
 " Use bash in Vim, not fish (or what-have-you):
 set shell=/bin/bash
 
