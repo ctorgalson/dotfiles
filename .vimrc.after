@@ -58,6 +58,14 @@ au FileType python set shiftwidth=2
 " Syntax highlighting.
 syntax on
 
+" HTML highlighting.
+if has("autocmd")
+  " Drupal *.twig files.
+  augroup html
+    autocmd BufRead,BufNewFile *.twig set filetype=html
+  augroup END
+endif
+
 " PHP highlighting.
 if has("autocmd")
   " Drupal *.module and *.install files.
