@@ -1,0 +1,2 @@
+" Disable unused plugin(s).
+call janus#disable_plugin('gundo')
