@@ -27,3 +27,5 @@
 [user]
   name = Christopher Torgalson
   email = manager@bedlamhotel.com
+[credential]
+	helper = cache
