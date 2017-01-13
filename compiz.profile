@@ -570,17 +570,17 @@ s0_x11_sync_blacklist_vendor = NVIDIA;NVIDIA;
 s0_x11_sync_blacklist_model = GeForce 6150(LE|SE);GeForce (7025|7050 PV);
 
 [grid]
-s0_put_center_key = <Alt>c
-s0_put_left_key = <Alt>h
-s0_put_right_key = <Alt>l
-s0_put_top_key = <Alt>k
-s0_put_bottom_key = <Alt>j
+s0_put_center_key = <Control><Alt>c
+s0_put_left_key = <Control><Alt>h
+s0_put_right_key = <Control><Alt>l
+s0_put_top_key = <Control><Alt>k
+s0_put_bottom_key = <Control><Alt>j
 s0_put_topleft_key = <Control><Alt>4
 s0_put_topright_key = <Control><Alt>1
 s0_put_bottomleft_key = <Control><Alt>3
 s0_put_bottomright_key = <Control><Alt>2
-s0_put_maximize_key = <Alt>m
-s0_put_restore_key = <Alt>r
+s0_put_maximize_key = <Control><Alt>m
+s0_put_restore_key = <Control><Alt>r
 s0_left_maximize = <Control><Super>Left
 s0_right_maximize = <Control><Super>Right
 s0_top_left_corner_action = 4
