@@ -12,7 +12,6 @@
   filemode = false
   ignorecase = false
   excludesfile = ~/.gitignore_global
-  editor = /usr/local/bin/vim
 [diff]
   renames = copies
   tool = vimdiff
