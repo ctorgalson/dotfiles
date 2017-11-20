@@ -58,6 +58,8 @@ au FileType python set shiftwidth=2
 " Syntax highlighting.
 syntax on
 
+set foldmethod=syntax
+
 " HTML highlighting.
 if has("autocmd")
   " Drupal *.twig files.
@@ -168,6 +170,7 @@ nnoremap / /\v
 vnoremap / /\v
 
 " Syntastic PHP_Codesniffer settings.
+let g:syntastic_shell = "/bin/sh"
 let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
 if has('statusline')
   set laststatus=2
