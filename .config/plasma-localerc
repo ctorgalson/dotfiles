@@ -1,0 +1,10 @@
+[Formats]
+LANG=iu_CA.UTF-8
+LC_MEASUREMENT=iu_CA.UTF-8
+LC_MONETARY=iu_CA.UTF-8
+LC_NUMERIC=iu_CA.UTF-8
+LC_TIME=iu_CA.UTF-8
+useDetailed=true
+
+[Translations]
+LANGUAGE=
