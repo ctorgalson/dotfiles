@@ -11,5 +11,6 @@ AutoCopySelectedText=true
 TrimTrailingSpacesInSelectedText=true
 
 [Scrolling]
+HistoryMode=2
 HistorySize=1000
 ScrollBarPosition=2
