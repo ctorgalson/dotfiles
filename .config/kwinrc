@@ -33,4 +33,4 @@ ButtonsOnLeft=XIA
 ButtonsOnRight=N
 CloseOnDoubleClickOnMenu=false
 library=org.kde.breeze
-theme=
+theme[$d]
