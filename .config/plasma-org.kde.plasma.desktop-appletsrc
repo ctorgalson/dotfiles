@@ -44,6 +44,15 @@ favoritesPortedToKAstats=true
 immutability=1
 plugin=org.kde.plasma.digitalclock
 
+[Containments][2][Applets][30][Configuration][Appearance]
+displayTimezoneAsCode=false
+selectedTimeZones=America/Vancouver,America/Edmonton,America/Winnipeg,America/Regina,America/Toronto,Local
+showLocalTimezone=true
+
+[Containments][2][Applets][30][Configuration][ConfigDialog]
+DialogHeight=1327
+DialogWidth=2690
+
 [Containments][2][Applets][31]
 immutability=1
 plugin=org.kde.plasma.systemtray
@@ -181,7 +190,7 @@ extraItems=org.kde.plasma.notifications,org.kde.plasma.mediacontroller,org.kde.p
 knownItems=org.kde.plasma.notifications,org.kde.plasma.mediacontroller,org.kde.plasma.printmanager,org.kde.plasma.vault,org.kde.plasma.bluetooth,org.kde.plasma.devicenotifier,org.kde.discovernotifier,org.kde.kdeconnect,org.kde.plasma.battery,org.kde.plasma.clipboard,org.kde.plasma.volume,org.kde.plasma.networkmanagement
 
 [General]
-immutability=2
+immutability=1
 
 [ScreenMapping]
 screenMapping=desktop:/Home.desktop,0,desktop:/trash.desktop,0
