@@ -15,41 +15,13 @@ if exists('&colorcolumn')
 endif
 
 
-" Airline / Powerline stuff.
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" Unicode symbols for Airline.
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" Powerline symbols for Airline.
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-
-
 " Indentation.
 set expandtab
 set tabstop=2
 set shiftwidth=2
 set autoindent
 set smartindent
+
 
 " Python.
 au FileType python set shiftwidth=2
@@ -186,3 +158,29 @@ if has('statusline')
   let g:syntastic_enable_signs=1
   set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info.
 endif
+
+
+" if !exists('g:vdebug_options')
+"   let g:vdebug_options = {}
+" endif
+
+" Vdebug.
+let g:vdebug_options['path_maps'] = {
+      \   '/var/www/dev.gore.com/drupal-site-factory-core/docroot/' : '/home/ctorgalson/Chromatic/Gore/WLGORE/drupal-site-factory-core/docroot'
+      \ }
+
+" " Stops execution at the first line.
+let g:vdebug_options['break_on_open'] = 1
+let g:vdebug_options['max_children'] = 128
+
+" Use the compact window layout.
+let g:vdebug_options['watch_window_style'] = 'compact'
+
+" Because it's the company default.
+let g:vdebug_options['ide_key'] = 'PHPSTORM'
+
+" Need to set as empty for this to work with Vagrant boxes.
+let g:vdebug_options['server'] = ""
+
+let g:vdebug_options['debug_file'] = '~/vdebug.log'
+let g:vdebug_options['debug_file_level'] = 5
