@@ -14,7 +14,7 @@ let g:lightline = {
 colorscheme solarized
 
 " Set background.
-set background=dark
+set background=light
 
 " Display location of 80th column.
 if exists('&colorcolumn')
@@ -114,6 +114,8 @@ endif
 
 map <C-Space> :za<CR>
 
+map <Leader>n :NERDTreeToggle<CR>
+
 " Clipboard.
 set clipboard=unnamed
 
@@ -140,8 +142,6 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
-
-call pathogen#helptags()
 
 " Fix Vim's messed-up regexing
 nnoremap / /\v
