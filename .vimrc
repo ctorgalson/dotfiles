@@ -29,7 +29,7 @@ set autoindent
 set smartindent
 
 " Python.
-au FileType python set shiftwidth=2
+au FileType python set shiftwidth=4
 
 
 " Syntax highlighting.
@@ -116,6 +116,10 @@ map <C-Space> :za<CR>
 
 map <Leader>n :NERDTreeToggle<CR>
 
+set number
+
+set backspace=indent,eol,start
+
 " Clipboard.
 set clipboard=unnamed
 
@@ -127,7 +131,7 @@ set mouse=a
 
 " Toggle paste with F2 (prevents disastrous auto-indenting when pasting
 " already indented code):
-set pastetoggle=<F2>
+" set pastetoggle=<F2>
 
 " Soft-wrap text:
 set wrap
@@ -148,22 +152,22 @@ nnoremap / /\v
 vnoremap / /\v
 
 " Syntastic PHP_Codesniffer settings.
-let g:syntastic_shell = "/bin/sh"
-let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
-if has('statusline')
-  set laststatus=2
-  " Broken down into easily includeable segments.
-  set statusline=%<%f\ " Filename
-  set statusline+=%w%h%m%r " Options.
-  set statusline+=%{fugitive#statusline()} " Git Hotness.
-  set statusline+=\ [%{&ff}/%Y] " filetype.
-  set statusline+=\ [%{getcwd()}] " current dir.
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-  let g:syntastic_enable_signs=1
-  set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info.
-endif
+" let g:syntastic_shell = "/bin/sh"
+" let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
+" if has('statusline')
+"   set laststatus=2
+"   " Broken down into easily includeable segments.
+"   set statusline=%<%f\ " Filename
+"   set statusline+=%w%h%m%r " Options.
+"   set statusline+=%{fugitive#statusline()} " Git Hotness.
+"   set statusline+=\ [%{&ff}/%Y] " filetype.
+"   set statusline+=\ [%{getcwd()}] " current dir.
+"   set statusline+=%#warningmsg#
+"   set statusline+=%{SyntasticStatuslineFlag()}
+"   set statusline+=%*
+"   let g:syntastic_enable_signs=1
+"   set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info.
+" endif
 
 " if !exists('g:vdebug_options')
 "   let g:vdebug_options = {}
