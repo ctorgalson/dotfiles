@@ -44,3 +44,6 @@ sites/*/private
 
 ### Ansible ###
 *.retry
+
+### Vim ###
+*.swp
