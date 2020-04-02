@@ -1,5 +1,7 @@
 " Vim appearance.
 
+set encoding=UTF-8
+
 " Make sure terminal is set to use 256 colours where possible.
 set t_Co=256
 
@@ -122,6 +124,14 @@ set backspace=indent,eol,start
 
 set hlsearch
 
+" NERDTree.
+if has('autocmd')
+  autocmd vimenter * NERDTree
+  autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+endif
+
+
 " Clipboard.
 set clipboard=unnamed
 
@@ -152,6 +162,10 @@ nmap <silent> <c-l> :wincmd l<CR>
 " Fix Vim's messed-up regexing
 nnoremap / /\v
 vnoremap / /\v
+
+" ALE
+" let g:ale_javascript_eslint_executable="/home/ctorgalson/.nvm/versions/node/v11.15.0/bin/eslint"
+" let g:ale_javascript_eslint_options="/home/ctorgalson/eslintrc.js"
 
 " Syntastic PHP_Codesniffer settings.
 " let g:syntastic_shell = "/bin/sh"

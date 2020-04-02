@@ -15,7 +15,7 @@
   editor = vim
 [diff]
   renames = copies
-  tool = vimdiff
+	tool = vimdiff
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
@@ -29,3 +29,5 @@
   email = manager@bedlamhotel.com
 [credential]
 	helper = cache
+[difftool]
+	prompt = false
