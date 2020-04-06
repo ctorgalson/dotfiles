@@ -16,7 +16,7 @@ let g:lightline = {
 colorscheme solarized
 
 " Set background.
-set background=light
+set background=dark
 
 " Display location of 80th column.
 if exists('&colorcolumn')
