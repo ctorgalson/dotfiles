@@ -46,4 +46,4 @@ sites/*/private
 *.retry
 
 ### Vim ###
-*.swp
+*.sw*
