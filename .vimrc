@@ -9,8 +9,8 @@ set t_Co=256
 
 " For lightline.
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ }
+\   'colorscheme': 'solarized',
+\ }
 
 " For the editor in general.
 colorscheme solarized
@@ -20,7 +20,7 @@ set background=dark
 
 " Display location of 80th column.
 if exists('&colorcolumn')
- set colorcolumn=80
+    set colorcolumn=80
 endif
 
 " Indentation.
@@ -32,7 +32,6 @@ set smartindent
 
 " Python.
 au FileType python set shiftwidth=4
-
 
 " Syntax highlighting.
 syntax on
@@ -72,22 +71,6 @@ let php_sql_query = 1
 " Enable HTML syntax highlighting inside strings:
 let php_htmlInStrings = 1
 
-" Using the old colorstyle:
-"let php_oldStyle = 1
-
-" Enable highlighting ASP-style short tags:
-"let php_asp_tags = 1
-
-" Disable short tags:
-"let php_noShortTags = 1
-
-" For highlighting parent error ] or ):
-"let php_parent_error_close = 1
-
-" For skipping an php end tag, if there exists an open ( or [ without a closing
-" one:
-"let php_parent_error_open = 1
-
 "Enable folding for classes and functions:
 let php_folding = 1
 let js_folding = 1
@@ -111,7 +94,6 @@ if has('autocmd')
   autocmd BufWritePre *.less :%s/\s\+$//e
 endif
 
-
 " Vim behaviour.
 
 map <C-Space> :za<CR>
@@ -131,7 +113,6 @@ if has('autocmd')
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 endif
 
-
 " Clipboard.
 set clipboard=unnamed
 
@@ -143,7 +124,7 @@ set mouse=a
 
 " Toggle paste with F2 (prevents disastrous auto-indenting when pasting
 " already indented code):
-" set pastetoggle=<F2>
+set pastetoggle=<F2>
 
 " Soft-wrap text:
 set wrap
@@ -163,53 +144,33 @@ nmap <silent> <c-l> :wincmd l<CR>
 nnoremap / /\v
 vnoremap / /\v
 
-" ALE
-" let g:ale_javascript_eslint_executable="/home/ctorgalson/.nvm/versions/node/v11.15.0/bin/eslint"
-" let g:ale_javascript_eslint_options="/home/ctorgalson/eslintrc.js"
+" Try again with xdebug. Don't know why I bother.
 
-" Syntastic PHP_Codesniffer settings.
-" let g:syntastic_shell = "/bin/sh"
-" let g:syntastic_php_phpcs_args="--standard=Drupal --extensions=php,module,inc,install,test,profile,theme"
-" if has('statusline')
-"   set laststatus=2
-"   " Broken down into easily includeable segments.
-"   set statusline=%<%f\ " Filename
-"   set statusline+=%w%h%m%r " Options.
-"   set statusline+=%{fugitive#statusline()} " Git Hotness.
-"   set statusline+=\ [%{&ff}/%Y] " filetype.
-"   set statusline+=\ [%{getcwd()}] " current dir.
-"   set statusline+=%#warningmsg#
-"   set statusline+=%{SyntasticStatuslineFlag()}
-"   set statusline+=%*
-"   let g:syntastic_enable_signs=1
-"   set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info.
+" if has("autocmd")
+"     autocmd VdebugOpt debug_file=~/vdebug.log
+"     autocmd VdebugOpt debug_file_level=2
 " endif
 
-" if !exists('g:vdebug_options')
-"   let g:vdebug_options = {}
-" endif
-" 
-" " Mapping '/remote/path' : '/local/path'
-" let g:vdebug_options['path_maps'] = {
-" \  '/var/www/dev.gore.com' : '/Users/ctorgalson/Chromatic/Gore/WLGORE/drupal-site-factory-core',
-" \  '/var/www/dev.gore.com/docroot/sites/all/themes/gore' : '/Users/ctorgalson/Chromatic/Gore/WLGORE/drupal-themes-gorecom/gore',
-" \}
-" 
-" " Stops execution at the first line.
-" let g:vdebug_options['break_on_open'] = 1
-" 
-" let g:vdebug_options['max_children'] = 128
-" 
-" " Use the compact window layout.
-" let g:vdebug_options['watch_window_style'] = 'compact'
-" 
-" " Because it's the company default.
-" let g:vdebug_options['ide_key'] = 'PHPSTORM'
-" 
-" 
-" " Need to set as empty for this to work with Vagrant boxes.
-" let g:vdebug_options['server'] = ""
-" 
-" let g:vdebug_options['debug_file'] = '~/vdebug.log'
-" 
-" let g:vdebug_options['debug_file_level'] = 2
+" Unf*ck vdebug_options per https://git.io/Jf1qA.
+if !exists('g:vdebug_options')
+    let g:vdebug_options = {}
+endif
+
+" Stops execution at the first line.
+let g:vdebug_options['break_on_open'] = 0
+let g:vdebug_options['max_children'] = 128
+
+" Use the compact window layout.
+let g:vdebug_options['watch_window_style'] = 'compact'
+
+" Because it's the company default.
+let g:vdebug_options['ide_key'] = 'PHPSTORM'
+
+" Need to set as empty for this to work with Vagrant boxes.
+let g:vdebug_options['server'] = ""
+
+" Mapping '/remote/path' : '/local/path'.
+"
+" {'/var/www': getcwd()} handles all Docksal! Thanks to jimafisk's video on
+" d8 debugging in Vim: https://youtu.be/IcWoCy4sjd0.
+let g:vdebug_options['path_maps'] = {'/var/www': getcwd()}
