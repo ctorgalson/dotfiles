@@ -8,10 +8,10 @@ zinit snippet OMZL::git.zsh
 # Load Git plugin and others from OMZ
 zinit snippet OMZP::git
 zinit snippet OMZP::history
-zinit snippet OMZ::plugins/zsh-history-substring/zsh-history-substring.plugin.zsh
+zinit ice svn && zinit snippet OMZP::history-substring-search
 zinit snippet OMZP::nvm
 zinit snippet OMZP::ssh-agent
-zinit snippet OMZ::plugins/z/z.plugin.zsh
+zinit ice svn && zinit snippet OMZP::z
 zinit cdclear -q # <- forget completions provided up to this moment.
 
 setopt promptsubst
