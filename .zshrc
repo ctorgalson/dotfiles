@@ -1,10 +1,30 @@
 # Managed by Ansible. This file may be overwritten when playbooks are run!
 
+source ~/.zinit/bin/zinit.zsh
+
+# Load OMZ Git library
+zinit snippet OMZL::git.zsh
+
+# Load Git plugin and others from OMZ
+zinit snippet OMZP::git
+zinit snippet OMZP::history
+zinit snippet OMZP::history-substring-search
+zinit snippet OMZP::nvm
+zinit snippet OMZP::ssh-agent
+zinit snippet OMZP::z
+zinit snippet OMZP::git
+zinit cdclear -q # <- forget completions provided up to this moment.
+
+setopt promptsubst
+
+# Load theme from OMZ
+zinit snippet OMZT::spaceship-prompt
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ctorgalson/.oh-my-zsh
+# export ZSH=/home/ctorgalson/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -47,16 +67,16 @@ DISABLE_UNTRACKED_FILES_DIRTY="False"
 HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$ZSH/custom
+# ZSH_CUSTOM=$ZSH/custom
 
 # Antigen theme and plugin installs.
-antigen theme denysdovhan/spaceship-prompt
-antigen bundle git
-antigen bundle history
-antigen bundle history-substring-search
-antigen bundle nvm
-antigen bundle ssh-agent
-antigen bundle z
+# antigen theme denysdovhan/spaceship-prompt
+# antigen bundle git
+# antigen bundle history
+# antigen bundle history-substring-search
+# antigen bundle nvm
+# antigen bundle ssh-agent
+# antigen bundle z
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
