@@ -18,7 +18,7 @@ zinit cdclear -q # <- forget completions provided up to this moment.
 setopt promptsubst
 
 # Load theme from OMZ
-zinit snippet OMZT::spaceship-prompt
+zinit light denysdovhan/spaceship-prompt
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
