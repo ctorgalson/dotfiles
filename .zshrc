@@ -8,7 +8,7 @@ zinit snippet OMZL::git.zsh
 # Load Git plugin and others from OMZ
 zinit snippet OMZP::git
 zinit snippet OMZP::history
-zinit light zsh-users/zsh-history-substring
+zinit snippet OMZP::zsh-history-substring
 zinit snippet OMZP::nvm
 zinit snippet OMZP::ssh-agent
 zinit snippet OMZP::z
