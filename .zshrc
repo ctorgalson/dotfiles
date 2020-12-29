@@ -65,6 +65,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="False"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="mm/dd/yyyy"
 
+# BEGIN SNIPPET: Platform.sh CLI configuration
+export PATH="$HOME/"'.platformsh/bin':"$PATH"
+if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=$ZSH/custom
 
