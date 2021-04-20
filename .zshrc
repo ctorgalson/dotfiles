@@ -6,6 +6,7 @@ source ~/.zinit/bin/zinit.zsh
 zinit snippet OMZL::git.zsh
 
 # Load Git plugin and others from OMZ
+zinit snippet OMZP::fzf
 zinit snippet OMZP::git
 zinit snippet OMZP::history
 zinit ice svn && zinit snippet OMZP::history-substring-search
