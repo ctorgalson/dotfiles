@@ -1,0 +1,179 @@
+### github.com key
+#
+
+# Host code.anner.ie
+#   Hostname code.anner.ie
+#   IdentityFile ~/.ssh/id_ed25519_yk20283512
+#   IdentitiesOnly yes
+# 
+Host github.com
+  Hostname github.com
+  IdentityFile ~/.ssh/id_ed25519_yk22463516
+  IdentitiesOnly yes
+
+Host bhost
+  Hostname bedlamhost.com
+  Port 2022
+  User bedlamho
+
+Host rdev2
+  Hostname 195.201.0.155
+  User ctorgalson
+  ForwardAgent yes
+
+Host rcksl
+  Hostname 162.55.164.32
+  User ctorgalson
+  ForwardAgent yes
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519_yk22463516
+
+Host rcksl2
+  Hostname 162.55.164.32
+  User ctorgalson
+  ForwardAgent yes
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519_yk2
+  # IdentityFile ~/.ssh/id_ed25519_yk20283512
+
+Host rckslc
+  Hostname 162.55.164.32
+  User ctorgalson
+  ForwardAgent yes
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ecdsa_yk10348625
+
+### duckmesh.com
+#
+# PROD: duckmesh.com
+Host duckmeshprod
+  Hostname 167.99.189.109
+  User nextcloud
+  ForwardAgent yes
+
+### nextcloud.s2n.app
+#
+# PROD
+Host nextcloud.s2n.app
+  Hostname 193.187.129.163
+  User nextcloud
+  # ForwardAgent yes
+
+### AT: Keys
+#
+# Glanbia (glanbianutritionals)
+Host gbnprod
+  Hostname glanbianutritionals.ssh.prod.acquia-sites.com
+  User glanbianutritionals.prod
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/glanbianutritionals.prod && bash -i
+
+Host gbnstage
+  Hostname glanbianutritionalsstg.ssh.prod.acquia-sites.com
+  User glanbianutritionals.test
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/glanbianutritionals.test && bash -i
+
+Host gbndev
+  Hostname glanbianutritionalsdev.ssh.prod.acquia-sites.com
+  User glanbianutritionals.dev
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/glanbianutritionals.dev && bash -i
+
+# Glanbia (gii)
+Host giiprod
+  Hostname giizppempmnuj.ssh.devcloud.acquia-sites.com
+  User gii.prod
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/gii.prod && bash -i
+
+Host giistage
+  Hostname gii88eywqje82.ssh.devcloud.acquia-sites.com
+  User gii.test
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/gii.test && bash -i
+
+Host giidev
+  Hostname giioh8uuau3pm.ssh.devcloud.acquia-sites.com
+  User gii.dev
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/gii.dev && bash -i
+
+Host girelandprod
+  Hostname glanbiairelandahcqu3uum9.ssh.devcloud.acquia-sites.com
+  User glanbiaireland.prod
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/glanbiaireland.prod && bash -i
+
+Host girelandstage
+  Hostname glanbiairelandhyzrvx7zig.ssh.devcloud.acquia-sites.com
+  User glanbiaireland.test
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/glanbiaireland.test && bash -i
+
+Host girelanddev
+  Hostname glanbiairelandhexdbrhhxr.ssh.devcloud.acquia-sites.com
+  User glanbiaireland.dev
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/glanbiaireland.dev && bash -i
+
+# carsireland.ie
+Host ciprod
+  Hostname ded-40511.prod.hosting.acquia.com
+  User carsireland.prod
+  IdentityFile ~/.ssh/at_clt
+  RequestTTY yes
+  RemoteCommand cd /mnt/www/html/carsireland && bash -i
+
+Host cistage
+  Hostname carsirelandstg.ssh.prod.acquia-sites.com
+  User carsireland.test
+  IdentityFile ~/.ssh/at_clt
+  RequestTTY yes
+  RemoteCommand cd /var/www/html/carsireland.test && bash -i
+
+Host cidev
+  Hostname carsirelandstg.ssh.prod.acquia-sites.com
+  User carsireland.dev
+  IdentityFile ~/.ssh/at_clt
+  RequestTTY yes
+  RemoteCommand cd /var/www/html/carsireland.dev && bash -i
+
+Host citaska
+  Hostname carsirelandode1.ssh.prod.acquia-sites.com
+  User carsireland.ode1
+  IdentityFile ~/.ssh/at_clt
+  RequestTTY yes
+  RemoteCommand cd /var/www/html/carsirelandode1 && bash -i
+
+Host citaskb
+  Hostname carsirelandode2.ssh.prod.acquia-sites.com
+  User carsireland.ode2
+  IdentityFile ~/.ssh/at_clt
+  RequestTTY yes
+  RemoteCommand cd /var/www/html/carsirelandode2 && bash -i
+
+Host citaskc
+  Hostname carsirelandode3.ssh.prod.acquia-sites.com
+  User carsireland.ode3
+  IdentityFile ~/.ssh/at_clt
+  RequestTTY yes
+  RemoteCommand cd /var/www/html/carsirelandode3 && bash -i
+
+Host ulprod
+  Hostname 195.154.27.41
+  User brendanl
+  Port 5076
+  ForwardAgent yes
+
+Host ulstage
+  Hostname 95.216.35.251
+  User brendanl
+  Port 5076
+  ForwardAgent yes
+
+# BEGIN: Platform.sh certificate configuration
+Host *.platform.sh
+  Include /home/ctorgalson/.platformsh/ssh/*.config
+Host *
+# END: Platform.sh certificate configuration
