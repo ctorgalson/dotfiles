@@ -1,5 +1,6 @@
 ### github.com key
 #
+AddKeysToAgent yes
 
 # Host code.anner.ie
 #   Hostname code.anner.ie
