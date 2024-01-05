@@ -1,26 +1,16 @@
 ### github.com key
 #
-AddKeysToAgent yes
+#AddKeysToAgent yes
 
 # Host code.anner.ie
 #   Hostname code.anner.ie
 #   IdentityFile ~/.ssh/id_ed25519_yk20283512
 #   IdentitiesOnly yes
-# 
-Host github.com
-  Hostname github.com
-  IdentityFile ~/.ssh/id_ed25519_yk22463516
-  IdentitiesOnly yes
-
-Host bhost
-  Hostname bedlamhost.com
-  Port 2022
-  User bedlamho
-
-Host rdev2
-  Hostname 195.201.0.155
-  User ctorgalson
-  ForwardAgent yes
+#
+#Host github.com
+#  Hostname github.com
+#  IdentityFile ~/.ssh/id_ed25519_yk22463516
+#  IdentitiesOnly yes
 
 Host rcksl
   Hostname 162.55.164.32
@@ -35,7 +25,6 @@ Host rcksl2
   ForwardAgent yes
   IdentitiesOnly yes
   IdentityFile ~/.ssh/id_ed25519_yk2
-  # IdentityFile ~/.ssh/id_ed25519_yk20283512
 
 Host rckslc
   Hostname 162.55.164.32
@@ -44,23 +33,7 @@ Host rckslc
   IdentitiesOnly yes
   IdentityFile ~/.ssh/id_ecdsa_yk10348625
 
-### duckmesh.com
-#
-# PROD: duckmesh.com
-Host duckmeshprod
-  Hostname 167.99.189.109
-  User nextcloud
-  ForwardAgent yes
-
-### nextcloud.s2n.app
-#
-# PROD
-Host nextcloud.s2n.app
-  Hostname 193.187.129.163
-  User nextcloud
-  # ForwardAgent yes
-
-### AT: Keys
+### AT
 #
 # Glanbia (glanbianutritionals)
 Host gbnprod
@@ -160,18 +133,6 @@ Host citaskc
   IdentityFile ~/.ssh/at_clt
   RequestTTY yes
   RemoteCommand cd /var/www/html/carsirelandode3 && bash -i
-
-Host ulprod
-  Hostname 195.154.27.41
-  User brendanl
-  Port 5076
-  ForwardAgent yes
-
-Host ulstage
-  Hostname 95.216.35.251
-  User brendanl
-  Port 5076
-  ForwardAgent yes
 
 # BEGIN: Platform.sh certificate configuration
 Host *.platform.sh
