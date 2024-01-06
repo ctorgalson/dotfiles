@@ -12,6 +12,11 @@
 #  IdentityFile ~/.ssh/id_ed25519_yk22463516
 #  IdentitiesOnly yes
 
+Host r2
+  Hostname 135.181.200.94
+  User ctorgalson
+  ForwardAgent yes
+
 Host rcksl
   Hostname 162.55.164.32
   User ctorgalson
