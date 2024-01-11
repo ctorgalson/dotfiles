@@ -21,15 +21,15 @@ Host rcksl
   Hostname 162.55.164.32
   User ctorgalson
   ForwardAgent yes
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/id_ed25519_yk22463516
+  #IdentitiesOnly yes
+  #IdentityFile ~/.ssh/id_ed25519_yk22463516
 
 Host rcksl2
   Hostname 162.55.164.32
   User ctorgalson
   ForwardAgent yes
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/id_ed25519_yk2
+  #IdentitiesOnly yes
+  #IdentityFile ~/.ssh/id_ed25519_yk2
 
 Host rckslc
   Hostname 162.55.164.32
