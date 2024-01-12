@@ -1,9 +1,17 @@
 return {
-  'maxmx03/solarized.nvim',
-  lazy = false,
-  priority = 1000,
+  'ishan9299/nvim-solarized-lua',
   config = function()
     vim.o.background = 'dark'
-    vim.cmd.colorscheme 'solarized'
+    vim.cmd.colorscheme 'solarized-high'
   end,
+  --
+  -- 'shaunsingh/solarized.nvim',
+  --
+  -- 'maxmx03/solarized.nvim',
+  -- lazy = false,
+  -- priority = 1000,
+  -- config = function()
+  --   vim.o.background = 'dark'
+  --   vim.cmd.colorscheme 'solarized'
+  -- end,
 }
