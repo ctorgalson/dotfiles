@@ -2,7 +2,7 @@ return {
   'ishan9299/nvim-solarized-lua',
   config = function()
     vim.o.background = 'dark'
-    vim.cmd.colorscheme 'solarized-high'
+    vim.cmd.colorscheme 'solarized'
   end,
   --
   -- 'shaunsingh/solarized.nvim',
