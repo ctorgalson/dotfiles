@@ -1,5 +1,5 @@
 configuration {
-	modi: "window,ssh,run";
+	modi: "window,drun,filebrowser,ssh,run";
 /*	font: "Ubuntu 16";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
@@ -22,7 +22,7 @@ configuration {
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-/*	sort: false;*/
+/*	sort: true;*/
 /*	sorting-method: "normal";*/
 /*	case-sensitive: false;*/
 /*	cycle: true;*/

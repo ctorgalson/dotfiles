@@ -6,7 +6,6 @@
 
 * {
   base03: #002b36;
-  base03-overlay: #002b36ee;
   base02: #073642;
   base01: #586e75;
   base00: #657b83;
@@ -22,7 +21,15 @@
   blue: #268bd2;
   cyan: #2aa198;
   green: #859900;
+ 
+  overlay: #586e75aa; // Based on base01
+  baselight: @base03; // Change to @base3 for dark
+  basedark: @base02;  // Change to @base2 for dark
+  fontlarge: "Ubuntu Regular 24";
+  fontsmall: "Ubuntu Regular 14";
 
+  // From Arc theme. Retained along with original code for variable names and
+  // applications (i.e. normal/urgent, etc).
   selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
   foreground:          rgba ( 82, 93, 118, 100 % );
   normal-foreground:       @foreground;
@@ -55,13 +62,7 @@
 }
 
 window {
-  // background-color: @base3;
-  // background-color: #00000099;
-  // background-color: #efefef99;
-  background-color: @base03-overlay;
-  // border: 0.125em;
-  // border-color: @base00;
-  // border-radius: 0.5em;
+  background-color: @overlay;
   font: 2em;
   fullscreen: true;
   location: center;
@@ -70,15 +71,13 @@ window {
 }
 
 mainbox {
-  width: 40%;
-  height: 50%;
-  background-color: @base3;
+  background-color: @baselight;
   border: 0.25em;
   border-color: @base00;
   border-radius: 0.5em;
-  //margin: 100px 300px;
-  margin: 25% 30%;
-  padding: 1em;
+  margin: 15% 25%;
+  padding: 1em 1em 1em;
+  width: 50%;
 }
 
 inputbar {
@@ -99,10 +98,10 @@ prompt {
 }
 
 entry {
-  background-color: @base2;
+  background-color: @basedark;
   border: 0.125em;
   border-color: @base1; 
-  font: "Ubuntu Mono 24";
+  font: @fontlarge;
   margin: 0 0 1em;
   padding: 0.75em;
   text-color: @base01;
@@ -126,20 +125,20 @@ element {
 
 element-icon {
   background-color: transparent;
-  size: 1em;
   cursor: inherit;
+  size: 1em;
   text-color: inherit;
   vertical-align: 0.75;
 }
 
 element selected {
-  background-color: @base2;
+  background-color: @basedark;
   text-color: @magenta;
 }
 
 element-text {
+  font: @fontsmall;
   text-color: inherit;
-  font: "Ubuntu Mono 14";
 }
 
 // mainbox {
