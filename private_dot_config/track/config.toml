@@ -1,0 +1,15 @@
+[database]
+database_file_path = "/home/ctorgalson/Documents/bh/track.sqlite3"
+
+[commands]
+[commands.add]
+
+[commands.delete]
+
+[commands.edit]
+
+[commands.show]
+filters = ["dates", "ids", "scope"]
+formats = ["json", "summary", "table", "yaml"]
+query_results_limit = 100
+scopes = ["this week", "last week", "this month", "last month", "all"]
